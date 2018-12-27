@@ -17,5 +17,6 @@
     - 7zip
     - adobereader
     - jre8
+    - googlechrome
     tags: software
     ignore_errors: yes
