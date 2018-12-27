@@ -16,5 +16,6 @@
     with_items:
     - 7zip
     - adobereader
+    - jre8
     tags: software
     ignore_errors: yes
