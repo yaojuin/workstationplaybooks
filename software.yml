@@ -1,0 +1,20 @@
+---
+- hosts: all
+  tasks:
+  - name: Install chocolatey/powershell on new systems
+    win_chocolatey:
+      name: powershell
+      state: present
+      execution_timeout: 0
+    tags: powershell
+  
+  - name: Install other software
+    win_chocolatey:
+      name: '{{ item }}'
+      state: present
+      execution_timeout: 0
+    with_items:
+    - 7zip
+    - adobereader
+    tags: software
+    ignore_errors: yes
