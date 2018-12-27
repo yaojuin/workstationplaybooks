@@ -1,0 +1,20 @@
+---
+- hosts: all
+  tasks: 
+  - name: Update all software installed with win chocolatey
+    win_chocolatey: 
+      name: all
+      state: latest
+    tags: choco
+    
+  - name: Create directory
+    win_file: 
+      path: C:\awx\Logs
+      state: directory
+      
+  - name: Install Windows Updates
+    win_updates:
+      log_path: C:\awx\Logs\win_updates.log
+      reboot: yes
+      state: installed
+    tags: win
