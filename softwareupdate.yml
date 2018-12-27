@@ -1,0 +1,13 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+  - name: Test system connection
+    wait_for_connection:
+      timeout: 10
+      
+  - name: Update all existing software installed with win chocolatey
+    win_chocolatey: 
+      name: all
+      state: latest
+    tags: software
