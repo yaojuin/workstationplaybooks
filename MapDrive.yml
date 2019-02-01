@@ -4,4 +4,4 @@
   - name: Create mapped drive under Z
     win_mapped_drive:
       letter: Z
-      path: \\10.1.1.134
+      path: \\10.1.1.134\it frontline sda
