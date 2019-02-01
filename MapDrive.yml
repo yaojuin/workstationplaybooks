@@ -5,3 +5,5 @@
     win_mapped_drive:
       letter: Z
       path: \\10.1.1.134\it frontline sda
+      username: PSPL\pngyj
+      password: maggyo123
