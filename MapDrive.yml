@@ -1,0 +1,7 @@
+---
+- hosts: all
+  tasks:
+  - name: Create mapped drive under Z
+    win_mapped_drive:
+      letter: Z
+      path: \\10.1.1.134
